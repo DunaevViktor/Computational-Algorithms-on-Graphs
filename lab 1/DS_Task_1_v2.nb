@@ -1,0 +1,1548 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     73514,       1540]
+NotebookOptionsPosition[     71339,       1480]
+NotebookOutlinePosition[     71683,       1495]
+CellTagsIndexPosition[     71640,       1492]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[StyleBox["\:0414\:0443\:043d\:0430\:0435\:0432 \:0412\:0438\
+\:043a\:0442\:043e\:0440 , 3 \:043a\:0443\:0440\:0441 , 6 \:0433\:0440\:0443\
+\:043f\:043f\:0430 , \:0412\:0430\:0440\:0438\:0430\:043d\:0442 23",
+ FontFamily->"Times New Roman"]], "Section",
+ CellChangeTimes->{{3.7276244524364405`*^9, 
+  3.727624469055357*^9}},ExpressionUUID->"d00504de-65e5-49a4-be07-\
+6de86833536a"],
+
+Cell[CellGroupData[{
+
+Cell["Task 1", "Section",
+ CellChangeTimes->{{3.727624765163375*^9, 
+  3.727624769947424*^9}},ExpressionUUID->"f9ca02a1-a044-43c0-a20a-\
+6f2ef6ca4111"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"vertex", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6"}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.7276248846005373`*^9, 
+  3.7276248856045127`*^9}},ExpressionUUID->"fbf5ff7a-b283-48bc-86ee-\
+7a27fa38c889"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"edges", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "\[DirectedEdge]", "5"}], ",", 
+     RowBox[{"2", "\[DirectedEdge]", "5"}], ",", 
+     RowBox[{"3", "\[DirectedEdge]", "1"}], ",", 
+     RowBox[{"3", "\[DirectedEdge]", "4"}], ",", 
+     RowBox[{"3", "\[DirectedEdge]", "5"}], ",", 
+     RowBox[{"4", "\[DirectedEdge]", "1"}], ",", 
+     RowBox[{"4", "\[DirectedEdge]", "2"}], ",", 
+     RowBox[{"4", "\[DirectedEdge]", "6"}], ",", 
+     RowBox[{"5", "\[DirectedEdge]", "4"}], ",", 
+     RowBox[{"6", "\[DirectedEdge]", "2"}], ",", 
+     RowBox[{"6", "\[DirectedEdge]", "3"}], ",", 
+     RowBox[{"6", "\[DirectedEdge]", "5"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.727624996242757*^9, 3.7276250202578487`*^9}, {
+  3.7276250756302624`*^9, 3.727625106041667*^9}, {3.7276251617870054`*^9, 
+  3.727625190921176*^9}, {3.7276254064650106`*^9, 
+  3.7276254104326987`*^9}},ExpressionUUID->"e9339069-f890-4462-a542-\
+85db6e91340e"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.72762520576091*^9, 
+  3.7276252069436827`*^9}},ExpressionUUID->"f593eb6a-d60c-4770-9c61-\
+a32d367cad54"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Task 2", "Section",
+ CellChangeTimes->{{3.7276252119139223`*^9, 
+  3.727625216684312*^9}},ExpressionUUID->"80a55159-55b8-48b7-ae42-\
+7900972564ad"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MYgraffon", " ", "=", " ", 
+  RowBox[{"Graph", "[", 
+   RowBox[{"vertex", ",", "edges", ",", " ", 
+    RowBox[{"VertexSize", "\[Rule]", "Large"}], ",", " ", 
+    RowBox[{"VertexStyle", "\[Rule]", "White"}], ",", " ", 
+    RowBox[{"VertexLabels", "\[Rule]", 
+     RowBox[{"Placed", "[", 
+      RowBox[{"\"\<Name\>\"", ",", "Center"}], "]"}]}], ",", 
+    RowBox[{"VertexLabelStyle", "\[Rule]", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Black", ",", "Italic", ",", "25"}], "]"}]}], ",", " ", 
+    RowBox[{"GraphLayout", "\[Rule]", 
+     RowBox[{"{", "\"\<CircularEmbedding\>\"", "}"}]}], ",", 
+    RowBox[{"EdgeShapeFunction", "\[Rule]", "\"\<Arrow\>\""}], ",", " ", 
+    RowBox[{"EdgeStyle", "\[Rule]", "Black"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.727625323692737*^9, 
+  3.7276253394546022`*^9}},ExpressionUUID->"fd08bf28-57ee-4bcc-a416-\
+158b48b67941"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5, 
+      6}, {{{1, 5}, {2, 5}, {3, 1}, {3, 4}, {3, 5}, {4, 1}, {4, 2}, {4, 6}, {
+       5, 4}, {6, 2}, {6, 3}, {6, 5}}, Null}, {
+      EdgeShapeFunction -> {"Arrow"}, EdgeStyle -> {
+         GrayLevel[0]}, GraphLayout -> {"CircularEmbedding"}, VertexLabels -> {
+         Placed["Name", Center]}, VertexLabelStyle -> {
+         Directive[
+          GrayLevel[0], Italic, 25]}, VertexSize -> {Large}, VertexStyle -> {
+         GrayLevel[1]}}]]}, 
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], Opacity[0.7], {
+          {Arrowheads[{{0.04, 0.8}}], 
+           ArrowBox[{{-0.8660254037844389, 0.5000000000000008}, {
+            0.8660254037844386, 0.4999999999999993}}]}}, {
+          {Arrowheads[{{0.04, 0.8}}], 
+           ArrowBox[{{-0.8660254037844384, -0.49999999999999933`}, {
+            0.8660254037844386, 0.4999999999999993}}]}}, {
+          {Arrowheads[{{0.04, 0.8}}], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {-0.8660254037844389, 
+            0.5000000000000008}}]}}, {
+          {Arrowheads[{{0.04, 0.8}}], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {
+            0.8660254037844389, -0.5000000000000012}}]}}, {
+          {Arrowheads[{{0.04, 0.8}}], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {0.8660254037844386, 
+            0.4999999999999993}}]}}, {
+          {Arrowheads[{{0.04, 0.8}}], 
+           ArrowBox[{{
+            0.8660254037844389, -0.5000000000000012}, {-0.8660254037844389, 
+            0.5000000000000008}}]}}, {
+          {Arrowheads[{{0.04, 0.8}}], 
+           ArrowBox[{{
+            0.8660254037844389, -0.5000000000000012}, {-0.8660254037844384, \
+-0.49999999999999933`}}]}}, {
+          {Arrowheads[{{0.04, 0.8}}], 
+           ArrowBox[{{0.8660254037844389, -0.5000000000000012}, {
+            1.8369701987210297`*^-16, 1.}}]}}, {
+          {Arrowheads[{{0.04, 0.8}}], 
+           ArrowBox[{{0.8660254037844386, 0.4999999999999993}, {
+            0.8660254037844389, -0.5000000000000012}}]}}, {
+          {Arrowheads[{{0.04, 0.8}}], 
+           ArrowBox[{{1.8369701987210297`*^-16, 
+            1.}, {-0.8660254037844384, -0.49999999999999933`}}]}}, {
+          {Arrowheads[{{0.04, 0.8}}], 
+           ArrowBox[{{1.8369701987210297`*^-16, 1.}, {
+            3.8285686989269494`*^-16, -1.}}]}}, {
+          {Arrowheads[{{0.04, 0.8}}], 
+           ArrowBox[{{1.8369701987210297`*^-16, 1.}, {0.8660254037844386, 
+            0.4999999999999993}}]}}}}, {
+        {GrayLevel[1], EdgeForm[{GrayLevel[0], Opacity[
+         0.7]}], {
+          DiskBox[{-0.8660254037844389, 0.5000000000000008}, 
+           0.19999999999999987], InsetBox[
+           StyleBox["1",
+            StripOnInput->False,
+            LineColor->GrayLevel[0],
+            FrontFaceColor->GrayLevel[0],
+            BackFaceColor->GrayLevel[0],
+            GraphicsColor->GrayLevel[0],
+            FontSize->25,
+            FontSlant->Italic,
+            FontColor->GrayLevel[0]], {-0.8660254037844389, 0.5000000000000008},
+           BaseStyle->"Graphics"]}, {
+          DiskBox[{-0.8660254037844384, -0.49999999999999933}, 
+           0.19999999999999987], InsetBox[
+           StyleBox["2",
+            StripOnInput->False,
+            LineColor->GrayLevel[0],
+            FrontFaceColor->GrayLevel[0],
+            BackFaceColor->GrayLevel[0],
+            GraphicsColor->GrayLevel[0],
+            FontSize->25,
+            FontSlant->Italic,
+            FontColor->GrayLevel[0]], {-0.8660254037844384, -0.49999999999999933},
+           BaseStyle->"Graphics"]}, {
+          DiskBox[{3.8285686989269494*^-16, -1.}, 0.19999999999999987], 
+          InsetBox[
+           StyleBox["3",
+            StripOnInput->False,
+            LineColor->GrayLevel[0],
+            FrontFaceColor->GrayLevel[0],
+            BackFaceColor->GrayLevel[0],
+            GraphicsColor->GrayLevel[0],
+            FontSize->25,
+            FontSlant->Italic,
+            FontColor->GrayLevel[0]], {3.8285686989269494*^-16, -1.},
+           BaseStyle->"Graphics"]}, {
+          DiskBox[{0.8660254037844389, -0.5000000000000012}, 
+           0.19999999999999987], InsetBox[
+           StyleBox["4",
+            StripOnInput->False,
+            LineColor->GrayLevel[0],
+            FrontFaceColor->GrayLevel[0],
+            BackFaceColor->GrayLevel[0],
+            GraphicsColor->GrayLevel[0],
+            FontSize->25,
+            FontSlant->Italic,
+            FontColor->GrayLevel[0]], {0.8660254037844389, -0.5000000000000012},
+           BaseStyle->"Graphics"]}, {
+          DiskBox[{0.8660254037844386, 0.4999999999999993}, 
+           0.19999999999999987], InsetBox[
+           StyleBox["5",
+            StripOnInput->False,
+            LineColor->GrayLevel[0],
+            FrontFaceColor->GrayLevel[0],
+            BackFaceColor->GrayLevel[0],
+            GraphicsColor->GrayLevel[0],
+            FontSize->25,
+            FontSlant->Italic,
+            FontColor->GrayLevel[0]], {0.8660254037844386, 0.4999999999999993},
+           BaseStyle->"Graphics"]}, {
+          DiskBox[{1.8369701987210297*^-16, 1.}, 0.19999999999999987], 
+          InsetBox[
+           StyleBox["6",
+            StripOnInput->False,
+            LineColor->GrayLevel[0],
+            FrontFaceColor->GrayLevel[0],
+            BackFaceColor->GrayLevel[0],
+            GraphicsColor->GrayLevel[0],
+            FontSize->25,
+            FontSlant->Italic,
+            FontColor->GrayLevel[0]], {1.8369701987210297*^-16, 1.},
+           BaseStyle->"Graphics"]}}}}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{
+  3.727625343573513*^9, 3.7276254165702963`*^9, 3.7276284857022524`*^9, 
+   3.727628561755839*^9, {3.727628605028758*^9, 
+   3.7276286278203*^9}},ExpressionUUID->"fe0b7061-ffc5-428d-9f6a-\
+5da2ca2bb84a"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Task 3", "Section",
+ CellChangeTimes->{{3.7276254643165655`*^9, 
+  3.7276254715430527`*^9}},ExpressionUUID->"440993a5-013d-495f-955d-\
+6e281fdd4809"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Graph", "[", 
+    RowBox[{"vertex", ",", "edges", ",", " ", 
+     RowBox[{"VertexSize", "\[Rule]", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"i", "\[Rule]", 
+         RowBox[{"RandomReal", "[", 
+          RowBox[{"{", 
+           RowBox[{"0.5", ",", "1"}], "}"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "1", ",", "6"}], "}"}]}], "]"}]}], ",", 
+     RowBox[{"VertexShapeFunction", "\[Rule]", " ", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<UpTrapezoid\>\"", ",", " ", "\"\<Star\>\"", ",", " ", 
+         "\"\<Diamond\>\""}], "}"}], "\[LeftDoubleBracket]", 
+       RowBox[{
+        RowBox[{"Mod", "[", 
+         RowBox[{"k", ",", "3"}], "]"}], "+", "1"}], 
+       "\[RightDoubleBracket]"}]}], ",", 
+     RowBox[{"VertexStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"_", "?", "EvenQ"}], "\[Rule]", "Blue"}], "}"}]}], ",", " ", 
+     RowBox[{"VertexLabels", "\[Rule]", 
+      RowBox[{"Placed", "[", 
+       RowBox[{"\"\<Name\>\"", ",", "Center"}], "]"}]}], ",", 
+     RowBox[{"VertexLabelStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"Black", ",", "Italic", ",", 
+        RowBox[{"19", "+", "k"}]}], "]"}]}], ",", 
+     RowBox[{"GraphHighlight", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"k", ",", 
+        RowBox[{"_", "\[DirectedEdge]", "k"}]}], "}"}]}], ",", " ", 
+     RowBox[{"GraphLayout", "\[Rule]", 
+      RowBox[{"{", "\"\<CircularEmbedding\>\"", "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"k", ",", "1", ",", "6"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.727625688943225*^9, 3.727625712949086*^9}, {
+  3.727625898098295*^9, 3.727625898449047*^9}, {3.7276259800105433`*^9, 
+  3.7276260220518975`*^9}, {3.7276260597943363`*^9, 3.7276260616406455`*^9}, {
+  3.727626216763403*^9, 3.7276262297948737`*^9}, {3.7276266311560326`*^9, 
+  3.727626651116891*^9}, {3.7276267009204717`*^9, 3.7276267402970304`*^9}, {
+  3.727628473282771*^9, 
+  3.7276284752728014`*^9}},ExpressionUUID->"96fd62d3-cc15-4a7f-9cdc-\
+848dc0c96e85"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{1, 2, 3, 4, 5, 
+        6}, {{{1, 5}, {2, 5}, {3, 1}, {3, 4}, {3, 5}, {4, 1}, {4, 2}, {4, 
+         6}, {5, 4}, {6, 2}, {6, 3}, {6, 5}}, Null}, {GraphHighlight -> {
+           DirectedEdge[4, 1], 1, 
+           DirectedEdge[3, 1]}, GraphLayout -> {"CircularEmbedding"}, 
+         VertexLabels -> {
+           Placed["Name", Center]}, VertexLabelStyle -> {
+           Directive[
+            GrayLevel[0], Italic, 20]}, VertexShapeFunction -> {"Star"}, 
+         VertexSize -> {
+          6 -> 0.6588353333207903, 4 -> 0.557734795829704, 3 -> 
+           0.5413160044714891, 2 -> 0.5200245699031906, 1 -> 
+           0.6828524141429362, 5 -> 0.7685430353574544}, 
+         VertexStyle -> {
+          6 -> RGBColor[0, 0, 1], 2 -> RGBColor[0, 0, 1], 4 -> 
+           RGBColor[0, 0, 1]}}]]}, 
+      TagBox[GraphicsGroupBox[{{
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+           ArrowBox[{{-0.8660254037844389, 0.5000000000000008}, {
+            0.8660254037844386, 0.4999999999999993}}, 0.02261146496815286], 
+           ArrowBox[{{-0.8660254037844384, -0.49999999999999933`}, {
+            0.8660254037844386, 0.4999999999999993}}, 0.02261146496815286], 
+           {Hue[1, 1, 0.7], Opacity[1], 
+            ArrowBox[{{3.8285686989269494`*^-16, -1.}, {-0.8660254037844389, 
+             0.5000000000000008}}, 0.02261146496815286]}, 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {
+            0.8660254037844389, -0.5000000000000012}}, 0.02261146496815286], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {0.8660254037844386, 
+            0.4999999999999993}}, 0.02261146496815286], 
+           {Hue[1, 1, 0.7], Opacity[1], 
+            ArrowBox[{{
+             0.8660254037844389, -0.5000000000000012}, {-0.8660254037844389, 
+             0.5000000000000008}}, 0.02261146496815286]}, 
+           ArrowBox[{{
+            0.8660254037844389, -0.5000000000000012}, {-0.8660254037844384, \
+-0.49999999999999933`}}, 0.02261146496815286], 
+           ArrowBox[{{0.8660254037844389, -0.5000000000000012}, {
+            1.8369701987210297`*^-16, 1.}}, 0.02261146496815286], 
+           ArrowBox[{{0.8660254037844386, 0.4999999999999993}, {
+            0.8660254037844389, -0.5000000000000012}}, 0.02261146496815286], 
+           ArrowBox[{{1.8369701987210297`*^-16, 
+            1.}, {-0.8660254037844384, -0.49999999999999933`}}, 
+            0.02261146496815286], 
+           ArrowBox[{{1.8369701987210297`*^-16, 1.}, {
+            3.8285686989269494`*^-16, -1.}}, 0.02261146496815286], 
+           ArrowBox[{{1.8369701987210297`*^-16, 1.}, {0.8660254037844386, 
+            0.4999999999999993}}, 0.02261146496815286]}}, {
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], {
+            {Hue[1, 1, 0.7], EdgeForm[{Hue[1, 1, 0.7], Opacity[1]}], 
+             PolygonBox[{{-0.8660254037844389, 
+              0.9016776898333705}, {-0.9653258018491047, 
+              0.6013025213429336}, {-1.2677030936178086`, 
+              0.5948232762113383}, {-1.0266964797177869`, 
+              0.40270206663980923`}, {-1.1142760575198962`, 
+              0.09832231016663101}, {-0.8660254037844389, 
+              0.2799600280500307}, {-0.6177747500489816, 
+              0.09832231016663101}, {-0.705354327851091, 
+              0.40270206663980923`}, {-0.46434771395106916`, 
+              0.5948232762113383}, {-0.7667250057197732, 
+              0.6013025213429336}, {-0.8660254037844389, 
+              0.9016776898333705}}]}, InsetBox[
+             StyleBox["1",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->20,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {-0.8660254037844389, 0.5000000000000008},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{-0.8660254037844384, -0.19410334712299626`}, \
+{-0.9416473767397603, -0.42285331500572126`}, {-1.1719220566614414`, \
+-0.42778756813724766`}, {-0.9883840649352396, -0.5740970009040801}, \
+{-1.0550800761604582`, -0.8058966528770024}, {-0.8660254037844384, \
+-0.6675708973196087}, {-0.6769707314084186, -0.8058966528770024}, \
+{-0.7436667426336372, -0.5740970009040801}, {-0.5601287509074353, \
+-0.42778756813724766`}, {-0.7904034308291165, -0.42285331500572126`}, \
+{-0.8660254037844384, -0.19410334712299626`}}]}, InsetBox[
+             StyleBox["2",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->20,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {-0.8660254037844384, -0.49999999999999933},
+             BaseStyle->"Graphics"]}, {
+            PolygonBox[{{
+             3.8285686989269494`*^-16, -0.6815789801097139}, \
+{-0.0787181733702435, -0.9196946881046457}, {-0.31842101989028576`, \
+-0.9248309650130734}, {-0.1273684079561141, -1.0771307641871313`}, \
+{-0.1967951627676071, -1.3184210198902861`}, {
+             3.8285686989269494`*^-16, -1.174431774674877}, {
+             0.1967951627676079, -1.3184210198902861`}, {
+             0.12736840795611487`, -1.0771307641871313`}, {
+             0.31842101989028654`, -0.9248309650130734}, {
+             0.07871817337024428, -0.9196946881046457}, {
+             3.8285686989269494`*^-16, -0.6815789801097139}}], InsetBox[
+             StyleBox["3",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->20,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {3.8285686989269494*^-16, -1.},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{0.8660254037844389, -0.17192087237511555`}, {
+              0.7849196097748834, -0.417258927569073}, {
+              0.5379462761595533, -0.4225509941793032}, {
+              0.7347937527344847, -0.5794702367207861}, {
+              0.6632611976279481, -0.8280791276248869}, {
+              0.8660254037844389, -0.6797225085363795}, {
+              1.0687896099409298`, -0.8280791276248869}, {
+              0.9972570548343932, -0.5794702367207861}, {
+              1.1941045314093246`, -0.4225509941793032}, {
+              0.9471311977939945, -0.417258927569073}, {
+              0.8660254037844389, -0.17192087237511555`}}]}, InsetBox[
+             StyleBox["4",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->20,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {0.8660254037844389, -0.5000000000000012},
+             BaseStyle->"Graphics"]}, {
+            PolygonBox[{{0.8660254037844386, 0.9520839124034911}, {
+             0.7542638755827576, 0.6140148963813483}, {0.41394149138094677`, 
+             0.606722575790359}, {0.6851918388230418, 0.3904922242495041}, {
+             0.5866219675517539, 0.04791608759650745}, {0.8660254037844386, 
+             0.2523473821870371}, {1.1454288400171233`, 
+             0.04791608759650745}, {1.0468589687458354`, 
+             0.3904922242495041}, {1.3181093161879305`, 0.606722575790359}, {
+             0.9777869319861195, 0.6140148963813483}, {0.8660254037844386, 
+             0.9520839124034911}}], InsetBox[
+             StyleBox["5",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->20,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {0.8660254037844386, 0.4999999999999993},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{1.8369701987210297`*^-16, 
+              1.3875500022959548`}, {-0.09580783417150907, 
+              1.0977395393688059`}, {-0.3875500022959546, 
+              1.0914881803085914`}, {-0.15502000091838172`, 
+              0.906124200443454}, {-0.2395192560111063, 0.6124499977040452}, {
+              1.8369701987210297`*^-16, 0.7876992081143753}, {
+              0.23951925601110668`, 0.6124499977040452}, {0.1550200009183821, 
+              0.906124200443454}, {0.38755000229595493`, 
+              1.0914881803085914`}, {0.09580783417150943, 
+              1.0977395393688059`}, {1.8369701987210297`*^-16, 
+              1.3875500022959548`}}]}, InsetBox[
+             StyleBox["6",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->20,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {1.8369701987210297*^-16, 1.},
+             BaseStyle->"Graphics"]}}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{1, 2, 3, 4, 5, 
+        6}, {{{1, 5}, {2, 5}, {3, 1}, {3, 4}, {3, 5}, {4, 1}, {4, 2}, {4, 
+         6}, {5, 4}, {6, 2}, {6, 3}, {6, 5}}, Null}, {GraphHighlight -> {
+           DirectedEdge[4, 2], 
+           DirectedEdge[6, 2], 2}, GraphLayout -> {"CircularEmbedding"}, 
+         VertexLabels -> {
+           Placed["Name", Center]}, VertexLabelStyle -> {
+           Directive[
+            GrayLevel[0], Italic, 21]}, VertexShapeFunction -> {"Diamond"}, 
+         VertexSize -> {
+          6 -> 0.927911507382369, 4 -> 0.9375920952286451, 3 -> 
+           0.7068561471041086, 2 -> 0.7590204618085903, 1 -> 
+           0.5088364912393585, 5 -> 0.6066240029277566}, 
+         VertexStyle -> {
+          6 -> RGBColor[0, 0, 1], 2 -> RGBColor[0, 0, 1], 4 -> 
+           RGBColor[0, 0, 1]}}]]}, 
+      TagBox[GraphicsGroupBox[{{
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+           ArrowBox[{{-0.8660254037844389, 0.5000000000000008}, {
+            0.8660254037844386, 0.4999999999999993}}, 0.02261146496815286], 
+           ArrowBox[{{-0.8660254037844384, -0.49999999999999933`}, {
+            0.8660254037844386, 0.4999999999999993}}, 0.02261146496815286], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {-0.8660254037844389, 
+            0.5000000000000008}}, 0.02261146496815286], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {
+            0.8660254037844389, -0.5000000000000012}}, 0.02261146496815286], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {0.8660254037844386, 
+            0.4999999999999993}}, 0.02261146496815286], 
+           ArrowBox[{{
+            0.8660254037844389, -0.5000000000000012}, {-0.8660254037844389, 
+            0.5000000000000008}}, 0.02261146496815286], 
+           {Hue[1, 1, 0.7], Opacity[1], 
+            ArrowBox[{{
+             0.8660254037844389, -0.5000000000000012}, {-0.8660254037844384, \
+-0.49999999999999933`}}, 0.02261146496815286]}, 
+           ArrowBox[{{0.8660254037844389, -0.5000000000000012}, {
+            1.8369701987210297`*^-16, 1.}}, 0.02261146496815286], 
+           ArrowBox[{{0.8660254037844386, 0.4999999999999993}, {
+            0.8660254037844389, -0.5000000000000012}}, 0.02261146496815286], 
+           {Hue[1, 1, 0.7], Opacity[1], 
+            ArrowBox[{{1.8369701987210297`*^-16, 
+             1.}, {-0.8660254037844384, -0.49999999999999933`}}, 
+             0.02261146496815286]}, 
+           ArrowBox[{{1.8369701987210297`*^-16, 1.}, {
+            3.8285686989269494`*^-16, -1.}}, 0.02261146496815286], 
+           ArrowBox[{{1.8369701987210297`*^-16, 1.}, {0.8660254037844386, 
+            0.4999999999999993}}, 0.02261146496815286]}}, {
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+           0.7]}], {
+            PolygonBox[{{-0.8660254037844389, 
+             0.21564944778316647`}, {-0.5816748515676047, 
+             0.5000000000000008}, {-0.8660254037844389, 
+             0.784350552216835}, {-1.1503759560012732`, 
+             0.5000000000000008}, {-0.8660254037844389, 
+             0.21564944778316647`}}], InsetBox[
+             StyleBox["1",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->21,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {-0.8660254037844389, 0.5000000000000008},
+             BaseStyle->"Graphics"]}, {
+            {Hue[1, 1, 0.7], EdgeForm[{Hue[1, 1, 0.7], Opacity[1]}], 
+             PolygonBox[{{-0.8660254037844384, -0.9241596095701845}, \
+{-0.4418657942142532, -0.49999999999999933`}, {-0.8660254037844384, \
+-0.07584039042981416}, {-1.2901850133546235`, -0.49999999999999933`}, \
+{-0.8660254037844384, -0.9241596095701845}}]}, InsetBox[
+             StyleBox["2",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->21,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {-0.8660254037844384, -0.49999999999999933},
+             BaseStyle->"Graphics"]}, {
+            PolygonBox[{{3.8285686989269494`*^-16, -1.3950088864054533`}, {
+             0.3950088864054536, -1.}, {
+             3.8285686989269494`*^-16, -0.6049911135945467}, \
+{-0.39500888640545284`, -1.}, {
+             3.8285686989269494`*^-16, -1.3950088864054533`}}], InsetBox[
+             StyleBox["3",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->21,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {3.8285686989269494*^-16, -1.},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{0.8660254037844389, -1.0239499026161485`}, {
+              1.3899753064005862`, -0.5000000000000012}, {0.8660254037844389, 
+              0.023949902616146046`}, {
+              0.34207550116829166`, -0.5000000000000012}, {
+              0.8660254037844389, -1.0239499026161485`}}]}, InsetBox[
+             StyleBox["4",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->21,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {0.8660254037844389, -0.5000000000000012},
+             BaseStyle->"Graphics"]}, {
+            PolygonBox[{{0.8660254037844386, 0.1610033415638959}, {
+             1.205022062220542, 0.4999999999999993}, {0.8660254037844386, 
+             0.8389966584361026}, {0.5270287453483352, 0.4999999999999993}, {
+             0.8660254037844386, 0.1610033415638959}}], InsetBox[
+             StyleBox["5",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->21,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {0.8660254037844386, 0.4999999999999993},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{1.8369701987210297`*^-16, 0.481459851887048}, {
+              0.5185401481129522, 1.}, {1.8369701987210297`*^-16, 
+              1.518540148112952}, {-0.5185401481129518, 1.}, {
+              1.8369701987210297`*^-16, 0.481459851887048}}]}, InsetBox[
+             StyleBox["6",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->21,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {1.8369701987210297*^-16, 1.},
+             BaseStyle->"Graphics"]}}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{1, 2, 3, 4, 5, 
+        6}, {{{1, 5}, {2, 5}, {3, 1}, {3, 4}, {3, 5}, {4, 1}, {4, 2}, {4, 
+         6}, {5, 4}, {6, 2}, {6, 3}, {6, 5}}, Null}, {GraphHighlight -> {
+           DirectedEdge[6, 3], 3}, GraphLayout -> {"CircularEmbedding"}, 
+         VertexLabels -> {
+           Placed["Name", Center]}, VertexLabelStyle -> {
+           Directive[
+            GrayLevel[0], Italic, 22]}, 
+         VertexShapeFunction -> {"UpTrapezoid"}, 
+         VertexSize -> {
+          6 -> 0.8584230262047232, 4 -> 0.8370745781487307, 3 -> 
+           0.759198860548205, 2 -> 0.8416206928039404, 1 -> 
+           0.8202117701841529, 5 -> 0.5382736407013874}, 
+         VertexStyle -> {
+          6 -> RGBColor[0, 0, 1], 2 -> RGBColor[0, 0, 1], 4 -> 
+           RGBColor[0, 0, 1]}}]]}, 
+      TagBox[GraphicsGroupBox[{{
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+           ArrowBox[{{-0.8660254037844389, 0.5000000000000008}, {
+            0.8660254037844386, 0.4999999999999993}}, 0.02261146496815286], 
+           ArrowBox[{{-0.8660254037844384, -0.49999999999999933`}, {
+            0.8660254037844386, 0.4999999999999993}}, 0.02261146496815286], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {-0.8660254037844389, 
+            0.5000000000000008}}, 0.02261146496815286], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {
+            0.8660254037844389, -0.5000000000000012}}, 0.02261146496815286], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {0.8660254037844386, 
+            0.4999999999999993}}, 0.02261146496815286], 
+           ArrowBox[{{
+            0.8660254037844389, -0.5000000000000012}, {-0.8660254037844389, 
+            0.5000000000000008}}, 0.02261146496815286], 
+           ArrowBox[{{
+            0.8660254037844389, -0.5000000000000012}, {-0.8660254037844384, \
+-0.49999999999999933`}}, 0.02261146496815286], 
+           ArrowBox[{{0.8660254037844389, -0.5000000000000012}, {
+            1.8369701987210297`*^-16, 1.}}, 0.02261146496815286], 
+           ArrowBox[{{0.8660254037844386, 0.4999999999999993}, {
+            0.8660254037844389, -0.5000000000000012}}, 0.02261146496815286], 
+           ArrowBox[{{1.8369701987210297`*^-16, 
+            1.}, {-0.8660254037844384, -0.49999999999999933`}}, 
+            0.02261146496815286], 
+           {Hue[1, 1, 0.7], Opacity[1], 
+            ArrowBox[{{1.8369701987210297`*^-16, 1.}, {
+             3.8285686989269494`*^-16, -1.}}, 0.02261146496815286]}, 
+           ArrowBox[{{1.8369701987210297`*^-16, 1.}, {0.8660254037844386, 
+            0.4999999999999993}}, 0.02261146496815286]}}, {
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+           0.7]}], {
+            PolygonBox[{{-1.3002537170376312`, 
+             0.15261611907979183`}, {-0.43179709053124676`, 
+             0.15261611907979183`}, {-0.6489104269460727, 
+             0.8473838809202097}, {-1.083140380622805, 
+             0.8473838809202097}, {-1.3002537170376312`, 
+             0.15261611907979183`}}], InsetBox[
+             StyleBox["1",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->22,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {-0.8660254037844389, 0.5000000000000008},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{-1.311587814761772, -0.8564511912129056}, \
+{-0.4204629928071046, -0.8564511912129056}, {-0.6432433566750787, \
+-0.14354880878709309`}, {-1.0888074508937982`, -0.14354880878709309`}, \
+{-1.311587814761772, -0.8564511912129056}}]}, InsetBox[
+             StyleBox["2",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->22,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {-0.8660254037844384, -0.49999999999999933},
+             BaseStyle->"Graphics"]}, {
+            {Hue[1, 1, 0.7], EdgeForm[{Hue[1, 1, 0.7], Opacity[1]}], 
+             PolygonBox[{{-0.40192746876282454`, -1.3215431138085507`}, {
+              0.4019274687628253, -1.3215431138085507`}, {
+              0.20096449358027338`, -0.6784568861914493}, \
+{-0.2009644935802726, -0.6784568861914493}, {-0.40192746876282454`, \
+-1.3215431138085507`}}]}, InsetBox[
+             StyleBox["3",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->22,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {3.8285686989269494*^-16, -1.},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{0.42286975136671967`, -0.8545257775460438}, {
+              1.3091810562021582`, -0.8545257775460438}, {
+              1.0876040670678766`, -0.14547422245395863`}, {
+              0.6444467405010011, -0.14547422245395863`}, {
+              0.42286975136671967`, -0.8545257775460438}}]}, InsetBox[
+             StyleBox["4",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->22,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {0.8660254037844389, -0.5000000000000012},
+             BaseStyle->"Graphics"]}, {
+            PolygonBox[{{0.5810579556607173, 0.2720252340905612}, {
+             1.15099285190816, 0.2720252340905612}, {1.00850966611994, 
+             0.7279747659094373}, {0.7235411414489372, 0.7279747659094373}, {
+             0.5810579556607173, 0.2720252340905612}}], InsetBox[
+             StyleBox["5",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->22,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {0.8660254037844386, 0.4999999999999993},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{-0.4544577343030421, 0.6364325249230269}, {
+              0.4544577343030424, 0.6364325249230269}, {0.22722972557454751`, 
+              1.363567475076973}, {-0.22722972557454713`, 
+              1.363567475076973}, {-0.4544577343030421, 
+              0.6364325249230269}}]}, InsetBox[
+             StyleBox["6",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->22,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {1.8369701987210297*^-16, 1.},
+             BaseStyle->"Graphics"]}}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{1, 2, 3, 4, 5, 
+        6}, {{{1, 5}, {2, 5}, {3, 1}, {3, 4}, {3, 5}, {4, 1}, {4, 2}, {4, 
+         6}, {5, 4}, {6, 2}, {6, 3}, {6, 5}}, Null}, {GraphHighlight -> {
+           DirectedEdge[5, 4], 
+           DirectedEdge[3, 4], 4}, GraphLayout -> {"CircularEmbedding"}, 
+         VertexLabels -> {
+           Placed["Name", Center]}, VertexLabelStyle -> {
+           Directive[
+            GrayLevel[0], Italic, 23]}, VertexShapeFunction -> {"Star"}, 
+         VertexSize -> {
+          6 -> 0.9045681754817885, 4 -> 0.9774777524363686, 3 -> 
+           0.5274222864165353, 2 -> 0.7808748724314669, 1 -> 
+           0.6442841781296175, 5 -> 0.9960185625990675}, 
+         VertexStyle -> {
+          6 -> RGBColor[0, 0, 1], 2 -> RGBColor[0, 0, 1], 4 -> 
+           RGBColor[0, 0, 1]}}]]}, 
+      TagBox[GraphicsGroupBox[{{
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+           ArrowBox[{{-0.8660254037844389, 0.5000000000000008}, {
+            0.8660254037844386, 0.4999999999999993}}, 0.02261146496815286], 
+           ArrowBox[{{-0.8660254037844384, -0.49999999999999933`}, {
+            0.8660254037844386, 0.4999999999999993}}, 0.02261146496815286], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {-0.8660254037844389, 
+            0.5000000000000008}}, 0.02261146496815286], 
+           {Hue[1, 1, 0.7], Opacity[1], 
+            ArrowBox[{{3.8285686989269494`*^-16, -1.}, {
+             0.8660254037844389, -0.5000000000000012}}, 0.02261146496815286]},
+            ArrowBox[{{3.8285686989269494`*^-16, -1.}, {0.8660254037844386, 
+            0.4999999999999993}}, 0.02261146496815286], 
+           ArrowBox[{{
+            0.8660254037844389, -0.5000000000000012}, {-0.8660254037844389, 
+            0.5000000000000008}}, 0.02261146496815286], 
+           ArrowBox[{{
+            0.8660254037844389, -0.5000000000000012}, {-0.8660254037844384, \
+-0.49999999999999933`}}, 0.02261146496815286], 
+           ArrowBox[{{0.8660254037844389, -0.5000000000000012}, {
+            1.8369701987210297`*^-16, 1.}}, 0.02261146496815286], 
+           {Hue[1, 1, 0.7], Opacity[1], 
+            ArrowBox[{{0.8660254037844386, 0.4999999999999993}, {
+             0.8660254037844389, -0.5000000000000012}}, 0.02261146496815286]},
+            ArrowBox[{{1.8369701987210297`*^-16, 
+            1.}, {-0.8660254037844384, -0.49999999999999933`}}, 
+            0.02261146496815286], 
+           ArrowBox[{{1.8369701987210297`*^-16, 1.}, {
+            3.8285686989269494`*^-16, -1.}}, 0.02261146496815286], 
+           ArrowBox[{{1.8369701987210297`*^-16, 1.}, {0.8660254037844386, 
+            0.4999999999999993}}, 0.02261146496815286]}}, {
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+           0.7]}], {
+            PolygonBox[{{-0.8660254037844389, 
+             0.878990503522076}, {-0.9597172089680478, 
+             0.5955808463938858}, {-1.2450159073065141`, 
+             0.5894675559697029}, {-1.017621605193269, 
+             0.40819755816875697`}, {-1.1002545946013722`, 
+             0.12100949647792553`}, {-0.8660254037844389, 
+             0.29238812143413645`}, {-0.6317962129675057, 
+             0.12100949647792553`}, {-0.7144292023756088, 
+             0.40819755816875697`}, {-0.4870349002623637, 
+             0.5894675559697029}, {-0.7723335986008301, 
+             0.5955808463938858}, {-0.8660254037844389, 0.878990503522076}}], 
+            InsetBox[
+             StyleBox["1",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->23,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {-0.8660254037844389, 0.5000000000000008},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{-0.8660254037844384, -0.04066206941527578}, \
+{-0.9795802277334222, -0.38415565092504644`}, {-1.325363334369162, \
+-0.3915649821521124}, {-1.0497605760183277`, -0.6112649083855779}, \
+{-1.1499120732194617`, -0.9593379305847229}, {-0.8660254037844384, \
+-0.7516263858302615}, {-0.582138734349415, -0.9593379305847229}, \
+{-0.6822902315505489, -0.6112649083855779}, {-0.4066874731997148, \
+-0.3915649821521124}, {-0.7524705798354545, -0.38415565092504644`}, \
+{-0.8660254037844384, -0.04066206941527578}}]}, InsetBox[
+             StyleBox["2",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->23,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {-0.8660254037844384, -0.49999999999999933},
+             BaseStyle->"Graphics"]}, {
+            PolygonBox[{{
+             3.8285686989269494`*^-16, -0.6897517513497695}, \
+{-0.07669774889069213, -0.9217558489655342}, {-0.31024824865023004`, \
+-0.9267602953301974}, {-0.1240992994600918, -1.075151083035776}, \
+{-0.1917441085155877, -1.3102482486502305`}, {
+             3.8285686989269494`*^-16, -1.1699547115968618`}, {
+             0.19174410851558849`, -1.3102482486502305`}, {
+             0.12409929946009257`, -1.075151083035776}, {
+             0.3102482486502308, -0.9267602953301974}, {
+             0.0766977488906929, -0.9217558489655342}, {
+             3.8285686989269494`*^-16, -0.6897517513497695}}], InsetBox[
+             StyleBox["3",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->23,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {3.8285686989269494*^-16, -1.},
+             BaseStyle->"Graphics"]}, {
+            {Hue[1, 1, 0.7], EdgeForm[{Hue[1, 1, 0.7], Opacity[1]}], 
+             PolygonBox[{{0.8660254037844389, 0.07498662570440562}, {
+              0.7238805890251423, -0.35498922047056114`}, {
+              0.2910387780800321, -0.36426401812455367`}, {
+              0.6360307535026761, -0.6392783612502781}, {
+              0.5106638556250735, -1.074986625704408}, {
+              0.8660254037844389, -0.8149790097729629}, {
+              1.2213869519438043`, -1.074986625704408}, {
+              1.0960200540662017`, -0.6392783612502781}, {
+              1.4410120294888458`, -0.36426401812455367`}, {
+              1.0081702185437356`, -0.35498922047056114`}, {
+              0.8660254037844389, 0.07498662570440562}}]}, InsetBox[
+             StyleBox["4",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->23,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {0.8660254037844389, -0.5000000000000012},
+             BaseStyle->"Graphics"]}, {
+            PolygonBox[{{0.8660254037844386, 1.0858929791704612`}, {
+             0.7211843844112823, 0.647761345798696}, {0.2801324246139766, 
+             0.6383106236674748}, {0.6316682121162538, 
+             0.35807980506166476`}, {
+             0.5039233533608292, -0.08589297917046274}, {0.8660254037844386, 
+             0.17904646445304512`}, {
+             1.228127454208048, -0.08589297917046274}, {1.1003825954526234`, 
+             0.35807980506166476`}, {1.4519183829549007`, 
+             0.6383106236674748}, {1.0108664231575948`, 0.647761345798696}, {
+             0.8660254037844386, 1.0858929791704612`}}], InsetBox[
+             StyleBox["5",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->23,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {0.8660254037844386, 0.4999999999999993},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{1.8369701987210297`*^-16, 
+              1.5320986607045295`}, {-0.1315423040785614, 
+              1.1341944979690741`}, {-0.5320986607045293, 
+              1.1256115028360152`}, {-0.2128394642818116, 
+              0.8711103420960388}, {-0.3288553079123161, 
+              0.4679013392954705}, {1.8369701987210297`*^-16, 
+              0.7085151171213628}, {0.32885530791231643`, 
+              0.4679013392954705}, {0.212839464281812, 0.8711103420960388}, {
+              0.5320986607045297, 1.1256115028360152`}, {0.1315423040785618, 
+              1.1341944979690741`}, {1.8369701987210297`*^-16, 
+              1.5320986607045295`}}]}, InsetBox[
+             StyleBox["6",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->23,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {1.8369701987210297*^-16, 1.},
+             BaseStyle->"Graphics"]}}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{1, 2, 3, 4, 5, 
+        6}, {{{1, 5}, {2, 5}, {3, 1}, {3, 4}, {3, 5}, {4, 1}, {4, 2}, {4, 
+         6}, {5, 4}, {6, 2}, {6, 3}, {6, 5}}, Null}, {GraphHighlight -> {
+           DirectedEdge[6, 5], 5, 
+           DirectedEdge[3, 5], 
+           DirectedEdge[2, 5], 
+           DirectedEdge[1, 5]}, GraphLayout -> {"CircularEmbedding"}, 
+         VertexLabels -> {
+           Placed["Name", Center]}, VertexLabelStyle -> {
+           Directive[
+            GrayLevel[0], Italic, 24]}, VertexShapeFunction -> {"Diamond"}, 
+         VertexSize -> {
+          6 -> 0.8980569314952906, 4 -> 0.5208417267161076, 3 -> 
+           0.9767652814590041, 2 -> 0.6334265826477827, 1 -> 
+           0.9780605532725342, 5 -> 0.9417984284906263}, 
+         VertexStyle -> {
+          6 -> RGBColor[0, 0, 1], 2 -> RGBColor[0, 0, 1], 4 -> 
+           RGBColor[0, 0, 1]}}]]}, 
+      TagBox[GraphicsGroupBox[{{
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+           {Hue[1, 1, 0.7], Opacity[1], 
+            ArrowBox[{{-0.8660254037844389, 0.5000000000000008}, {
+             0.8660254037844386, 0.4999999999999993}}, 0.02261146496815286]}, 
+           {Hue[1, 1, 0.7], Opacity[1], 
+            ArrowBox[{{-0.8660254037844384, -0.49999999999999933`}, {
+             0.8660254037844386, 0.4999999999999993}}, 0.02261146496815286]}, 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {-0.8660254037844389, 
+            0.5000000000000008}}, 0.02261146496815286], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {
+            0.8660254037844389, -0.5000000000000012}}, 0.02261146496815286], 
+           {Hue[1, 1, 0.7], Opacity[1], 
+            ArrowBox[{{3.8285686989269494`*^-16, -1.}, {0.8660254037844386, 
+             0.4999999999999993}}, 0.02261146496815286]}, 
+           ArrowBox[{{
+            0.8660254037844389, -0.5000000000000012}, {-0.8660254037844389, 
+            0.5000000000000008}}, 0.02261146496815286], 
+           ArrowBox[{{
+            0.8660254037844389, -0.5000000000000012}, {-0.8660254037844384, \
+-0.49999999999999933`}}, 0.02261146496815286], 
+           ArrowBox[{{0.8660254037844389, -0.5000000000000012}, {
+            1.8369701987210297`*^-16, 1.}}, 0.02261146496815286], 
+           ArrowBox[{{0.8660254037844386, 0.4999999999999993}, {
+            0.8660254037844389, -0.5000000000000012}}, 0.02261146496815286], 
+           ArrowBox[{{1.8369701987210297`*^-16, 
+            1.}, {-0.8660254037844384, -0.49999999999999933`}}, 
+            0.02261146496815286], 
+           ArrowBox[{{1.8369701987210297`*^-16, 1.}, {
+            3.8285686989269494`*^-16, -1.}}, 0.02261146496815286], 
+           {Hue[1, 1, 0.7], Opacity[1], 
+            ArrowBox[{{1.8369701987210297`*^-16, 1.}, {0.8660254037844386, 
+             0.4999999999999993}}, 0.02261146496815286]}}}, {
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+           0.7]}], {
+            PolygonBox[{{-0.8660254037844389, -0.046564688682522726`}, \
+{-0.3194607151019154, 0.5000000000000008}, {-0.8660254037844389, 
+             1.0465646886825244`}, {-1.4125900924669623`, 
+             0.5000000000000008}, {-0.8660254037844389, \
+-0.046564688682522726`}}], InsetBox[
+             StyleBox["1",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->24,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {-0.8660254037844389, 0.5000000000000008},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{-0.8660254037844384, -0.8539746100481462}, \
+{-0.5120507937362915, -0.49999999999999933`}, {-0.8660254037844384, \
+-0.14602538995185238`}, {-1.2200000138325853`, -0.49999999999999933`}, \
+{-0.8660254037844384, -0.8539746100481462}}]}, InsetBox[
+             StyleBox["2",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->24,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {-0.8660254037844384, -0.49999999999999933},
+             BaseStyle->"Graphics"]}, {
+            PolygonBox[{{3.8285686989269494`*^-16, -1.5458408584113275`}, {
+             0.5458408584113279, -1.}, {
+             3.8285686989269494`*^-16, -0.45415914158867243`}, \
+{-0.5458408584113272, -1.}, {
+             3.8285686989269494`*^-16, -1.5458408584113275`}}], InsetBox[
+             StyleBox["3",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->24,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {3.8285686989269494*^-16, -1.},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{0.8660254037844389, -0.7910593779321299}, {
+              1.1570847817165677`, -0.5000000000000012}, {
+              0.8660254037844389, -0.20894062206787256`}, {
+              0.5749660258523103, -0.5000000000000012}, {
+              0.8660254037844389, -0.7910593779321299}}]}, InsetBox[
+             StyleBox["4",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->24,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {0.8660254037844389, -0.5000000000000012},
+             BaseStyle->"Graphics"]}, {
+            {Hue[1, 1, 0.7], EdgeForm[{Hue[1, 1, 0.7], Opacity[1]}], 
+             PolygonBox[{{0.8660254037844386, -0.02630050680127466}, {
+              1.3923259105857126`, 0.4999999999999993}, {0.8660254037844386, 
+              1.0263005068012732`}, {0.33972489698316466`, 
+              0.4999999999999993}, {
+              0.8660254037844386, -0.02630050680127466}}]}, InsetBox[
+             StyleBox["5",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->24,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {0.8660254037844386, 0.4999999999999993},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{1.8369701987210297`*^-16, 0.4981433352571445}, {
+              0.5018566647428557, 1.}, {1.8369701987210297`*^-16, 
+              1.5018566647428555`}, {-0.5018566647428553, 1.}, {
+              1.8369701987210297`*^-16, 0.4981433352571445}}]}, InsetBox[
+             StyleBox["6",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->24,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {1.8369701987210297*^-16, 1.},
+             BaseStyle->"Graphics"]}}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{1, 2, 3, 4, 5, 
+        6}, {{{1, 5}, {2, 5}, {3, 1}, {3, 4}, {3, 5}, {4, 1}, {4, 2}, {4, 
+         6}, {5, 4}, {6, 2}, {6, 3}, {6, 5}}, Null}, {GraphHighlight -> {6, 
+           DirectedEdge[4, 6]}, GraphLayout -> {"CircularEmbedding"}, 
+         VertexLabels -> {
+           Placed["Name", Center]}, VertexLabelStyle -> {
+           Directive[
+            GrayLevel[0], Italic, 25]}, 
+         VertexShapeFunction -> {"UpTrapezoid"}, 
+         VertexSize -> {
+          6 -> 0.8405281133825189, 4 -> 0.8620274663676797, 3 -> 
+           0.5636681848633086, 2 -> 0.5387545455935814, 1 -> 
+           0.7043726681444864, 5 -> 0.8413549461664026}, 
+         VertexStyle -> {
+          6 -> RGBColor[0, 0, 1], 2 -> RGBColor[0, 0, 1], 4 -> 
+           RGBColor[0, 0, 1]}}]]}, 
+      TagBox[GraphicsGroupBox[{{
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+           ArrowBox[{{-0.8660254037844389, 0.5000000000000008}, {
+            0.8660254037844386, 0.4999999999999993}}, 0.02261146496815286], 
+           ArrowBox[{{-0.8660254037844384, -0.49999999999999933`}, {
+            0.8660254037844386, 0.4999999999999993}}, 0.02261146496815286], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {-0.8660254037844389, 
+            0.5000000000000008}}, 0.02261146496815286], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {
+            0.8660254037844389, -0.5000000000000012}}, 0.02261146496815286], 
+           ArrowBox[{{3.8285686989269494`*^-16, -1.}, {0.8660254037844386, 
+            0.4999999999999993}}, 0.02261146496815286], 
+           ArrowBox[{{
+            0.8660254037844389, -0.5000000000000012}, {-0.8660254037844389, 
+            0.5000000000000008}}, 0.02261146496815286], 
+           ArrowBox[{{
+            0.8660254037844389, -0.5000000000000012}, {-0.8660254037844384, \
+-0.49999999999999933`}}, 0.02261146496815286], 
+           {Hue[1, 1, 0.7], Opacity[1], 
+            ArrowBox[{{0.8660254037844389, -0.5000000000000012}, {
+             1.8369701987210297`*^-16, 1.}}, 0.02261146496815286]}, 
+           ArrowBox[{{0.8660254037844386, 0.4999999999999993}, {
+            0.8660254037844389, -0.5000000000000012}}, 0.02261146496815286], 
+           ArrowBox[{{1.8369701987210297`*^-16, 
+            1.}, {-0.8660254037844384, -0.49999999999999933`}}, 
+            0.02261146496815286], 
+           ArrowBox[{{1.8369701987210297`*^-16, 1.}, {
+            3.8285686989269494`*^-16, -1.}}, 0.02261146496815286], 
+           ArrowBox[{{1.8369701987210297`*^-16, 1.}, {0.8660254037844386, 
+            0.4999999999999993}}, 0.02261146496815286]}}, {
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[
+           0.7]}], {
+            PolygonBox[{{-1.2389273380268113`, 
+             0.20167739604710072`}, {-0.4931234695420666, 
+             0.20167739604710072`}, {-0.6795737322905846, 
+             0.7983226039529008}, {-1.0524770752782933`, 
+             0.7983226039529008}, {-1.2389273380268113`, 
+             0.20167739604710072`}}], InsetBox[
+             StyleBox["1",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->25,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {-0.8660254037844389, 0.5000000000000008},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{-1.1512474477671362`, -0.7281784433179759}, \
+{-0.5808033598017406, -0.7281784433179759}, {-0.723413843038544, \
+-0.27182155668202274`}, {-1.0086369645303328`, -0.27182155668202274`}, \
+{-1.1512474477671362`, -0.7281784433179759}}]}, InsetBox[
+             StyleBox["2",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->25,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {-0.8660254037844384, -0.49999999999999933},
+             BaseStyle->"Graphics"]}, {
+            PolygonBox[{{-0.29841157374848365`, -1.2387301045010646`}, {
+             0.2984115737484844, -1.2387301045010646`}, {
+             0.14920635054242726`, -0.7612698954989354}, \
+{-0.14920635054242648`, -0.7612698954989354}, {-0.29841157374848365`, \
+-1.2387301045010646`}}], InsetBox[
+             StyleBox["3",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->25,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {3.8285686989269494*^-16, -1.},
+             BaseStyle->"Graphics"]}, {
+            {RGBColor[0, 0, 1], 
+             PolygonBox[{{0.4096594428147259, -0.8650940618169711}, {
+              1.3223913647541519`, -0.8650940618169711}, {
+              1.0942092462967619`, -0.13490593818303126`}, {
+              0.637841561272116, -0.13490593818303126`}, {
+              0.4096594428147259, -0.8650940618169711}}]}, InsetBox[
+             StyleBox["4",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->25,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {0.8660254037844389, -0.5000000000000012},
+             BaseStyle->"Graphics"]}, {
+            PolygonBox[{{0.42060368173448365`, 0.14366136032761612`}, {
+             1.3114471258343936`, 0.14366136032761612`}, {1.0887371061643623`,
+              0.8563386396723824}, {0.6433137014045149, 0.8563386396723824}, {
+             0.42060368173448365`, 0.14366136032761612`}}], InsetBox[
+             StyleBox["5",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->25,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {0.8660254037844386, 0.4999999999999993},
+             BaseStyle->"Graphics"]}, {
+            {Hue[1, 1, 0.7], EdgeForm[{Hue[1, 1, 0.7], Opacity[1]}], 
+             PolygonBox[{{-0.44498398850583887`, 0.6440115484031588}, {
+              0.4449839885058392, 0.6440115484031588}, {0.22249283478103307`, 
+              1.3559884515968412`}, {-0.22249283478103268`, 
+              1.3559884515968412`}, {-0.44498398850583887`, 
+              0.6440115484031588}}]}, InsetBox[
+             StyleBox["6",
+              StripOnInput->False,
+              LineColor->GrayLevel[0],
+              FrontFaceColor->GrayLevel[0],
+              BackFaceColor->GrayLevel[0],
+              GraphicsColor->GrayLevel[0],
+              FontSize->25,
+              FontSlant->Italic,
+              FontColor->GrayLevel[0]], {1.8369701987210297*^-16, 1.},
+             BaseStyle->"Graphics"]}}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    FormatType->TraditionalForm,
+    FrameTicks->None]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7276256025094624`*^9, {3.7276256935653086`*^9, 3.7276257153723536`*^9}, 
+   3.7276260254517612`*^9, 3.7276260641250677`*^9, {3.727626225201003*^9, 
+   3.7276262319510827`*^9}, 3.7276266596718674`*^9, {3.7276267040982757`*^9, 
+   3.727626742471103*^9}, {3.7276284789236608`*^9, 3.7276284858768787`*^9}, 
+   3.727628561931963*^9, {3.7276286052133875`*^9, 
+   3.72762862800393*^9}},ExpressionUUID->"0e1c5be7-544c-4d43-9037-\
+cd00f20fae3c"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Task 4", "Section",
+ CellChangeTimes->{{3.7276268510724506`*^9, 
+  3.7276268566205463`*^9}},ExpressionUUID->"941bab1c-83bd-4ecf-8188-\
+0b572f3b23eb"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"getMyGraph", "[", 
+   RowBox[{"vertexNum_", ",", "edgesNum_"}], "]"}], ":=", 
+  RowBox[{"(", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", 
+     RowBox[{"edges", ",", "vertex"}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"vertex", " ", "=", " ", 
+     RowBox[{"Table", "[", 
+      RowBox[{"i", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", "vertexNum"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"edges", " ", "=", " ", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"i", "\[DirectedEdge]", "#"}], "&"}], "/@", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"vertex", ",", "edgesNum"}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", "vertexNum"}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"edges", " ", "=", " ", 
+     RowBox[{"RandomChoice", "[", 
+      RowBox[{
+       RowBox[{"Flatten", "[", "edges", "]"}], ",", "edgesNum"}], "]"}]}], 
+    ";", "\[IndentingNewLine]", 
+    RowBox[{"Graph", "[", 
+     RowBox[{"vertex", ",", "edges"}], "]"}]}], "\[IndentingNewLine]", 
+   ")"}]}]], "Input",
+ CellChangeTimes->{{3.727627056686692*^9, 
+  3.7276271191999855`*^9}},ExpressionUUID->"9a07f346-0ff8-47d4-b0a3-\
+f6362a518798"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"getMyGraph", "[", 
+  RowBox[{"6", ",", "15"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7276270950200605`*^9, 
+  3.727627126296221*^9}},ExpressionUUID->"ef151f3a-ac40-4a6a-b260-\
+0aa3a0996bbd"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{1, 2, 3, 4, 5, 
+      6}, {{{1, 1}, {2, 6}, {5, 6}, {4, 1}, {3, 6}, {3, 6}, {4, 5}, {2, 4}, {
+       6, 6}, {5, 6}, {3, 6}, {1, 5}, {5, 6}, {5, 6}, {2, 6}}, Null}]]}, 
+    TagBox[GraphicsGroupBox[{GraphicsComplexBox[CompressedData["
+1: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
+07uhbqrdQPpSnWk+CXp/9dL6/huxVZCj
+        "], {{
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], Arrowheads[Medium], 
+           ArrowBox[{1, 5}, 0.03700564971751412], 
+           ArrowBox[BezierCurveBox[{1, 14, 17, 19, 25, 27, 30, 1},
+            SplineDegree->7], 0.03700564971751412], 
+           ArrowBox[{2, 4}, 0.03700564971751412], 
+           ArrowBox[BezierCurveBox[{2, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43,
+             44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 
+            60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 
+            76, 77, 6}], 0.03700564971751412], 
+           ArrowBox[BezierCurveBox[{2, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87,
+             88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 
+            103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 
+            116, 117, 118, 119, 120, 121, 6}], 0.03700564971751412], 
+           ArrowBox[BezierCurveBox[{
+            3, {0.6644407471831153, 0.6644407471831242}, 6}], 
+            0.03700564971751412], ArrowBox[{3, 6}, 0.03700564971751412], 
+           ArrowBox[BezierCurveBox[{
+            3, {0.3355592528168834, 0.33555925281687593`}, 6}], 
+            0.03700564971751412], ArrowBox[{4, 1}, 0.03700564971751412], 
+           ArrowBox[BezierCurveBox[{4, 154, 155, 156, 157, 158, 159, 160, 161,
+             162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 
+            175, 176, 177, 178, 179, 5}], 0.03700564971751412], 
+           ArrowBox[BezierCurveBox[{
+            5, {1.164440747183118, 0.499999999999926}, 6}], 
+            0.03700564971751412], 
+           ArrowBox[BezierCurveBox[{
+            5, {1.0549786696473125`, 0.5000000000003184}, 6}], 
+            0.03700564971751412], 
+           ArrowBox[BezierCurveBox[{
+            5, {0.9450213303526878, 0.4999999999999602}, 6}], 
+            0.03700564971751412], 
+           ArrowBox[BezierCurveBox[{
+            5, {0.8355592528168835, 0.4999999999999408}, 6}], 
+            0.03700564971751412], 
+           ArrowBox[BezierCurveBox[{6, 247, 250, 252, 258, 260, 263, 6},
+            SplineDegree->7], 0.03700564971751412]}}, {
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+           DiskBox[1, 0.03700564971751412], DiskBox[2, 0.03700564971751412], 
+           DiskBox[3, 0.03700564971751412], DiskBox[4, 0.03700564971751412], 
+           DiskBox[5, 0.03700564971751412], 
+           DiskBox[6, 0.03700564971751412]}}}]}],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{{3.7276270097184143`*^9, 3.727627024127592*^9}, {
+   3.7276271008952026`*^9, 3.7276271302904005`*^9}, 3.727628486484564*^9, 
+   3.7276285620210285`*^9, {3.727628605412664*^9, 
+   3.7276286280729847`*^9}},ExpressionUUID->"b9809ba3-596f-4212-b634-\
+44814c12e0ca"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["Task 5", "Section",
+ CellChangeTimes->{{3.7276299492897377`*^9, 
+  3.7276299565794024`*^9}},ExpressionUUID->"a079b193-9c0d-4d71-9d86-\
+7e1ead9a70b7"],
+
+Cell["Sad Smile : (", "Section",
+ CellChangeTimes->{{3.727629959310221*^9, 
+  3.7276299714830847`*^9}},ExpressionUUID->"c1fbc66f-30ed-43f4-97bc-\
+cfe04915bf87"]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 394, 6, 64, "Section", "ExpressionUUID" -> \
+"d00504de-65e5-49a4-be07-6de86833536a"],
+Cell[CellGroupData[{
+Cell[977, 30, 151, 3, 56, "Section", "ExpressionUUID" -> \
+"f9ca02a1-a044-43c0-a20a-6f2ef6ca4111"],
+Cell[1131, 35, 304, 8, 30, "Input", "ExpressionUUID" -> \
+"fbf5ff7a-b283-48bc-86ee-7a27fa38c889"],
+Cell[1438, 45, 990, 21, 30, "Input", "ExpressionUUID" -> \
+"e9339069-f890-4462-a542-85db6e91340e"],
+Cell[2431, 68, 153, 3, 30, "Input", "ExpressionUUID" -> \
+"f593eb6a-d60c-4770-9c61-a32d367cad54"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2621, 76, 153, 3, 70, "Section", "ExpressionUUID" -> \
+"80a55159-55b8-48b7-ae42-7900972564ad"],
+Cell[CellGroupData[{
+Cell[2799, 83, 890, 18, 50, "Input", "ExpressionUUID" -> \
+"fd08bf28-57ee-4bcc-a416-158b48b67941"],
+Cell[3692, 103, 6071, 137, 418, "Output", "ExpressionUUID" -> \
+"fe0b7061-ffc5-428d-9f6a-5da2ca2bb84a"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9812, 246, 155, 3, 70, "Section", "ExpressionUUID" -> \
+"440993a5-013d-495f-955d-6e281fdd4809"],
+Cell[CellGroupData[{
+Cell[9992, 253, 2121, 50, 69, "Input", "ExpressionUUID" -> \
+"96fd62d3-cc15-4a7f-9cdc-848dc0c96e85"],
+Cell[12116, 305, 49821, 979, 212, "Output", "ExpressionUUID" -> \
+"0e1c5be7-544c-4d43-9037-cd00f20fae3c"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61986, 1290, 155, 3, 70, "Section", "ExpressionUUID" -> \
+"941bab1c-83bd-4ecf-8188-0b572f3b23eb"],
+Cell[62144, 1295, 1326, 35, 145, "Input", "ExpressionUUID" -> \
+"9a07f346-0ff8-47d4-b0a3-f6362a518798"],
+Cell[CellGroupData[{
+Cell[63495, 1334, 215, 5, 30, "Input", "ExpressionUUID" -> \
+"ef151f3a-ac40-4a6a-b260-0aa3a0996bbd"],
+Cell[63713, 1341, 7277, 125, 447, "Output", "ExpressionUUID" -> \
+"b9809ba3-596f-4212-b634-44814c12e0ca"]
+}, Open  ]]
+}, Open  ]],
+Cell[71017, 1470, 155, 3, 70, "Section", "ExpressionUUID" -> \
+"a079b193-9c0d-4d71-9d86-7e1ead9a70b7"],
+Cell[71175, 1475, 160, 3, 56, "Section", "ExpressionUUID" -> \
+"c1fbc66f-30ed-43f4-97bc-cfe04915bf87"]
+}
+]
+*)
+
